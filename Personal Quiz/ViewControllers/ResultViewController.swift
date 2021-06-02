@@ -38,8 +38,3 @@ class ResultViewController: UIViewController {
         resultDefinitionLabel.text = finalResaultQuiz.definition
     }
 }
-
-/*Каюсь, наткнулся на ролик на youtube и по его аналогии сделал, т.к. решение мне его показалось самым удачным и минимизированным. А это то, к чему я очень хочу стремиться:)
- 
- Удачи на госах! Держим кулаки всей бандой :)
-*/
