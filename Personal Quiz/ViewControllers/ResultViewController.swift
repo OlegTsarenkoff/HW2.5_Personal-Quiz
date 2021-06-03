@@ -24,14 +24,13 @@ class ResultViewController: UIViewController {
     
     func resultPersonalQuiz() {
         var scoreOfAnswer: [AnimalType: Int] = [:]
-        let answerTypes = answers.map{ $0.type }
+        let answerTypes = answers.map { $0.type }
         
         for answer in answerTypes {
             scoreOfAnswer[answer] = (scoreOfAnswer[answer] ?? 0) + 1
         }
-        print(scoreOfAnswer)
         
-        let scoreAnswersSorted = scoreOfAnswer.sorted(by: {(value1, value2) -> Bool in return value1.value > value2.value})
+        let scoreAnswersSorted = scoreOfAnswer.sorted { $0.value > $1.value }
         let finalResaultQuiz = scoreAnswersSorted.first!.key
         
         resultAnswerLabel.text = "Вы - \(finalResaultQuiz.rawValue)!"
